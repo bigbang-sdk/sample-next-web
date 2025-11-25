@@ -18,9 +18,22 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
+      <head>
+        <Favicon />
+      </head>
       <body className={`${defaultFont.className} antialiased`}>
         <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>
   );
 }
+
+const Favicon = () => {
+  return (
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/bigbang-sdk/assets/refs/heads/main/bigbang/favicon/favicon.ico"
+      sizes="any"
+    />
+  );
+};
